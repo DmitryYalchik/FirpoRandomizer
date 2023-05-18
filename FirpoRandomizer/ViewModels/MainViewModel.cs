@@ -40,6 +40,7 @@ namespace FirpoRandomizer.ViewModels
         void ExecuteDeleteSlot(Slot parameter)
         {
             Slots.Remove(parameter);
+            CountFreeSlots = Slots.Count();
         }
 
 
