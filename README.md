@@ -47,4 +47,4 @@
 | ------------- | ------------- |
 | Библиотека Prism.Core 8.1.97  | [github.com/PrismLibrary/Prism](https://github.com/PrismLibrary/Prism)  |
 | Логотип чемпионата "Профессионалы"  | [pro.firpo.ru](https://pro.firpo.ru/)  |
-| Шрифт Rubic  | [fonts.google.com/specimen/Rubik](https://fonts.google.com/specimen/Rubik)  |
+| Шрифт Rubik  | [fonts.google.com/specimen/Rubik](https://fonts.google.com/specimen/Rubik)  |
