@@ -1,0 +1,94 @@
+﻿<Window
+    x:Class="FirpoRandomizer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FirpoRandomizer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:FirpoRandomizer.ViewModels"
+    Title="Рандомайзер &quot;Профессионалы&quot;"
+    MinWidth="1280"
+    MinHeight="720"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodels:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image
+            Grid.RowSpan="3"
+            Opacity="0.2"
+            Source="pack://application:,,,/Resources/bg.png"
+            Stretch="UniformToFill" />
+        <Image
+            Grid.Row="1"
+            MaxHeight="100"
+            Margin="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Source="pack://application:,,,/Resources/logo.png" />
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                Width="60"
+                MinHeight="60"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Stretch"
+                Command="{Binding OpenAddWindow}"
+                Style="{StaticResource AddNewSlot}" />
+            <ItemsControl Grid.Column="1" ItemsSource="{Binding Slots, UpdateSourceTrigger=PropertyChanged}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel
+                            ItemHeight="70"
+                            ItemWidth="70"
+                            Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button
+                            Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.DeleteSlot}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"
+                            Content="{Binding Number, UpdateSourceTrigger=PropertyChanged}"
+                            IsEnabled="{Binding IsFree, UpdateSourceTrigger=PropertyChanged}"
+                            Style="{StaticResource Slot}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBlock
+                HorizontalAlignment="Center"
+                FontFamily="{StaticResource Regilar}"
+                FontSize="170"
+                FontWeight="SemiBold"
+                Text="{Binding ChooseSlot, UpdateSourceTrigger=PropertyChanged}" />
+            <Button
+                Width="250"
+                Height="40"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                Command="{Binding TakeFreeSlot}"
+                Content="Выбрать"
+                Style="{StaticResource Slot}" />
+        </StackPanel>
+        <TextBlock
+            Grid.Row="1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Opacity="0.1"
+            Text="Разработано Дмитрием Яльчик" />
+    </Grid>
+</Window>
