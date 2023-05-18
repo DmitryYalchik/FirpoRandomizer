@@ -8,7 +8,9 @@
 ## Бейджи
 | Описание  | Статус |
 | ------------- | ------------- |
-| Последний коммит  | [![.NET](https://github.com/DerRofocale/FirpoRandomizer/actions/workflows/dotnet.yml/badge.svg?event=push)](https://github.com/DerRofocale/FirpoRandomizer/actions/workflows/dotnet.yml)  |
+| Последний коммит  | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DerRofocale/FirpoRandomizer/dotnet.yml?label=build&style=for-the-badge)  |
+| Актуальная версия  | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/DerRofocale/FirpoRandomizer?style=for-the-badge)  |
+| Скачиваний  | ![GitHub all releases](https://img.shields.io/github/downloads/DerRofocale/FirpoRandomizer/total?style=for-the-badge)  |
 
 
 ## Предисловие
