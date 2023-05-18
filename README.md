@@ -5,13 +5,14 @@
 	<strong>Простая жеребьёвка рабочих мест</strong>
 </div>
 
-## Бейджи
+## Информация
 | Описание  | Статус |
 | ------------- | ------------- |
-| Последний коммит  | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DerRofocale/FirpoRandomizer/dotnet.yml?label=build&style=for-the-badge)  |
+| Сборка последнего коммита  | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DerRofocale/FirpoRandomizer/dotnet.yml?label=build&style=for-the-badge)  |
 | Актуальная версия  | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/DerRofocale/FirpoRandomizer?style=for-the-badge)  |
 | Скачиваний  | ![GitHub all releases](https://img.shields.io/github/downloads/DerRofocale/FirpoRandomizer/total?style=for-the-badge)  |
-
+| Язык  | ![GitHub top language](https://img.shields.io/github/languages/top/DerRofocale/FirpoRandomizer?style=for-the-badge)  |
+| Лицензия  | ![GitHub](https://img.shields.io/github/license/DerRofocale/FirpoRandomizer?style=for-the-badge)  |
 
 ## Предисловие
 Данный проект был придуман и реализован не для коммерческого использования.
